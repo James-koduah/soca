@@ -30,3 +30,33 @@ let combinedArray = [
 for (let item of combinedArray){
     cool_scroll_translate(item, 150)
 }
+
+
+
+let faq_questions = document.getElementsByClassName('question')
+for (let item of faq_questions){
+    let main = item.getElementsByClassName('question_main')[0]
+    let svg = main.getElementsByTagName('svg')[0]
+    let ans = item.getElementsByClassName('question_ans')[0]
+    main.addEventListener('click', ()=>{
+        if (ans.style.display == '' || ans.style.display == 'none'){
+            ans.style.display = 'block'
+            item.style.height = '0px'
+            svg.style.transform = 'rotate(0deg)'
+            item.style.height = ans.clientHeight + main.clientHeight + 20 + 'px'
+            setTimeout(() => {    
+                ans.style.opacity = 1
+                ans.style.transform = 'translate(0px, 0px)'
+            }, 100);
+        }else{
+            svg.style.transform = 'rotate(180deg)'
+            ans.style.opacity = 0
+            ans.style.transform = 'translate(0px, -50px)'
+            item.style.height = item.clientHeight - 40 + 'px'
+                item.style.height = main.clientHeight + 'px'
+            setTimeout(() => {
+                ans.style.display = 'none'
+            }, 200);
+        }
+    })
+}
