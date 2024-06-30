@@ -248,8 +248,8 @@ nav{
         flex-wrap: wrap;
     }
     .hero_images_item{
-        width: 40%;
-        height: 250px;
+        width: 100px;
+        height: 200px;
         margin-left: 0;
         margin-bottom: 10px;
     }
@@ -258,13 +258,13 @@ nav{
 
 
 #about{
-    width: 90%;
-    padding: 80px 5%;
+    width: 92%;
+    padding: 80px 4%;
     background: #000;
     color: #eee;
 }
 #about .header{
-    font-size: 36px;
+    font-size: 40px;
     font-weight: 600;
     margin-bottom: 60px;
 }
@@ -330,6 +330,79 @@ nav{
         transform: translate(30px, 50);
     }
 }
+
+
+
+#about_pitch{
+    margin-top: 160px;
+}
+#about_pitch .header{
+    margin-bottom: 20px;
+}
+#about_pitch p{
+    font-size: 16px;
+    margin-bottom: 20px;
+    line-height: 160%;
+    color: #fff;
+}
+#about_pitch .action_button{
+    margin-bottom: 20px;
+}
+#about_pitch .action_button p{
+    margin-bottom: 0;
+    color: #000;
+}
+
+#about_packages{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 80px;
+}
+#about_packages .board{
+    width: calc(49% - 40px);
+    padding: 20px;
+    background-color: var(--ma-bg);
+    margin-bottom: 20px;
+    border-radius: 15px;
+}
+#about_packages .board_img svg{
+    width: 50px !important;
+    height: 50px !important;
+    margin-bottom: 20px;
+}
+#about_packages .board_header{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: var(--black);
+}
+#about_packages .board_text{
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: var(--light_text);
+}
+#about_packages .long{
+    width: calc(100% - 40px);
+}
+
+@media (max-width: 720px) {
+    #about_pitch p{
+        font-size: 14px;
+    }
+    #about_packages .board{
+        width: calc(100% - 40px);
+    }
+}
+@media (max-width: 550px) {
+    #about_pitch p{
+        width: 90%;
+    }
+}
+
+
+
+
 
 
 #workingonit{
