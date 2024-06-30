@@ -60,3 +60,29 @@ for (let item of faq_questions){
         }
     })
 }
+
+
+
+
+
+
+
+
+document.getElementById('nav_main').addEventListener('click', ()=>{
+    let dropdown = document.getElementById('nav_dropdown')
+    if (dropdown.style.display == '' || dropdown.style.display == 'none'){
+        dropdown.style.display = 'block';
+        setTimeout(() => {
+        dropdown.style.top = '100%'
+        dropdown.style.opacity = '1'
+        }, 100);
+    }else{
+    
+        dropdown.style.top = '-100%'
+        dropdown.style.opacity = '0'
+        setTimeout(() => {
+            dropdown.style.display = 'none'
+        }, 600);
+    }
+    
+})
