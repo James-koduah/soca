@@ -139,7 +139,19 @@ nav{
     border-right: none;
     border-left: none;
 }
-
+@media (max-width: 600px) {
+    #nav_right p{
+        font-size: 20px;
+    }
+    #nav_left{
+        width: fit-content;
+    }
+}
+@media (max-width: 300px) {
+    #nav_right p{
+        display: none;
+    }
+}
 
 
 /* The hero section */
@@ -187,8 +199,7 @@ nav{
     font-size: 14px;
     color: #ccc;
 }
-#hero_checkout_right{
-    height: 100%;
+#hero_chechout_right{
     width: fit-content;
     display: flex;
     align-items: center;
@@ -217,6 +228,21 @@ nav{
 }
 
 @media (max-width: 600px) {
+    #hero{
+        padding-top: 100px;
+    }
+    #hero h1{
+        font-size: 30px;
+    }
+    #hero_checkout{
+        border-radius: 15px;
+        width: 92%;
+        padding: 20px 4%;
+    }
+    #hero_chechout_right img{
+        width: 70px;
+        height: 80px;
+    }
     #hero_images{
         justify-content: space-around;
         flex-wrap: wrap;
