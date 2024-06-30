@@ -249,9 +249,8 @@ nav{
     }
     .hero_images_item{
         width: 40%;
-        height: 300px;
+        height: 250px;
         margin-left: 0;
-        min-width: 200px;
         margin-bottom: 10px;
     }
 }
