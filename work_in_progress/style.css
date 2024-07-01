@@ -1,6 +1,7 @@
 *{
     padding: 0;
     margin: 0;
+    scroll-margin-top: 75px;
 }
 :root{
     --nav-bg: #ffffff;
@@ -20,6 +21,10 @@ img{
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+a{
+    text-decoration: none;
+    color: inherit;
 }
 
 /* Buttons with animations */
@@ -58,11 +63,11 @@ img{
     height: 50%;
     border: 20px #fff solid;
     border-radius: 45px;
-    transition: .3s;
+    transition: .2s linear;
     opacity: 0;
 }
 .action_button:hover{
-    transform: scale(1.1);
+    transform: scale(1.1) !important;
 }
 .action_button:hover .action_button_flair{
     opacity: 1;
@@ -86,10 +91,10 @@ img{
 
 /* Makes an item move up when the mouse hovers over it */
 .up_a{
-    transition: 0.2s;
+    transition: 0.2s !important;
 }
 .up_a:hover{
-    transform: translateY(-5px);
+    transform: translateY(-10px) !important;
 }
 
 
@@ -209,6 +214,7 @@ nav{
     font-size: 16px;
     line-height: 160%;
     margin-bottom: 24px;
+    color: var(--light_text);
 }
 #hero .action_button{
     margin-bottom: 40px;
@@ -267,6 +273,14 @@ nav{
     margin-left: 100px;
 }
 
+@media (max-width: 720px) {
+    #hero h1{
+        font-size: 30px;
+    }
+    #hero_sub_header{
+        font-size: 14px;
+    }
+}
 @media (max-width: 600px) {
     #hero{
         padding-top: 100px;
@@ -427,6 +441,9 @@ nav{
 }
 
 @media (max-width: 720px) {
+    #about_pitch .header{
+        font-size: 30px;
+    }
     #about_pitch p{
         font-size: 14px;
     }
@@ -672,7 +689,81 @@ nav{
 
 
 footer{
+    width: 90%;
+    padding: 120px 5%;
+    background: #222831;
+    color: #fff;
+}
+footer h2{
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    text-align: center;
+}
+#footer_email{
+    display: block;
+    padding: 15px 25px;
+    background-color: black;
+    width: fit-content;
+    margin: 0 auto;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: .6s;
+}
+#footer_email:hover{
+    transform: scale(1.1);
+    background-color: #222831;
+}
+
+#footer_b{
     width: 100%;
-    height: 80vh;
-    background: rgb(34, 40, 49);
+    display: flex;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+.footer_b_item{
+    width: 50%;
+}
+#footer_b_item1 a{
+    display: block;
+    font-size: 45px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+#footer_b_item1 a:hover{
+    /* /* border-bottom: 1px #fff solid; */
+    text-decoration: underline;
+}
+
+
+.f_i_item{
+    width: 100%;
+    display: flex;
+    padding: 20px 0 40px 0;
+    border-bottom: 1px #444 solid;
+}
+.f_i_img{
+    flex-shrink: 0;
+    margin-right: 20px;
+}
+.f_i_img svg{
+    width: 35px !important;
+    height: 35px !important;
+}
+.f_i_text header{
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+.f_i_text p{
+    font-size: 14px;
+    font-weight: 600;
+}
+
+@media (max-width: 720px) {
+    .footer_b_item{
+        width: 100%;
+        margin-top: 30px;
+    }
 }
