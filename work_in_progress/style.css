@@ -91,7 +91,7 @@ a{
 
 /* Makes an item move up when the mouse hovers over it */
 .up_a{
-    transition: 0.2s !important;
+    transition: 0.2s;
 }
 .up_a:hover{
     transform: translateY(-10px) !important;
