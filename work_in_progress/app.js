@@ -69,26 +69,27 @@ for (let item of faq_questions){
 
 
 document.getElementById('nav_main').addEventListener('click', ()=>{
-    let dropdown = document.getElementById('nav_dropdown')
-    let button = document.getElementById('nav_left_button')
-    if (dropdown.style.display == '' || dropdown.style.display == 'none'){
-        dropdown.style.display = 'flex';
-        setTimeout(() => {
-        dropdown.style.top = '100%'
-        dropdown.style.opacity = '1'
-        button.style.border = 'none'
-        button.getElementsByTagName('p')[0].style.display = 'block'
-        }, 100);
-    }else{
-        button.style.border = '2px #555 solid'
-        button.style.borderLeft = 'none'
-        button.style.borderRight = 'none'
-        button.getElementsByTagName('p')[0].style.display = 'none'
-        dropdown.style.top = '-100%'
-        dropdown.style.opacity = '0'
-        setTimeout(() => {
-            dropdown.style.display = 'none'
-        }, 600);
+    if (window.innerWidth < 1101){
+        let dropdown = document.getElementById('nav_dropdown')
+        let button = document.getElementById('nav_left_button')
+        if (dropdown.style.display == '' || dropdown.style.display == 'none'){
+            dropdown.style.display = 'flex';
+            setTimeout(() => {
+            dropdown.style.top = '100%'
+            dropdown.style.opacity = '1'
+            button.style.border = 'none'
+            button.getElementsByTagName('p')[0].style.display = 'block'
+            }, 100);
+        }else{
+            button.style.border = '2px #555 solid'
+            button.style.borderLeft = 'none'
+            button.style.borderRight = 'none'
+            button.getElementsByTagName('p')[0].style.display = 'none'
+            dropdown.style.top = '-100%'
+            dropdown.style.opacity = '0'
+            setTimeout(() => {
+                dropdown.style.display = 'none'
+            }, 600);
+        }
     }
-    
 })

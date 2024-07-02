@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Soca</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="base.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
@@ -28,6 +29,20 @@
                 <p>JG Media Works</p>
             </div>
             <div id="nav_left">
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#about">About us</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                    <li>
+                        <a href="form/" class="action_button">
+                            <p>Fill in our Form</p>
+                            <div style="display: contents;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--token-b7e0ee39-7195-4e97-994f-cec289c7aee4, rgb(255, 255, 255))" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 100%; height: 100%;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div>
+                            <div class="action_button_flair"></div>
+                        </a>
+                    </li>
+                </ul>
                 <div id="nav_left_button"><p>X</p></div>
             </div>
         </div>
@@ -37,7 +52,7 @@
             <a href="#services">Services</a>
             <a href="#faq">FAQ</a>
             <a href="#contact">Contact Us</a>
-            <a href="" class="action_button">
+            <a href="form/" class="action_button">
                 <p>Fill in our Form</p>
                 <div style="display: contents;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--token-b7e0ee39-7195-4e97-994f-cec289c7aee4, rgb(255, 255, 255))" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 100%; height: 100%;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div>
                 <div class="action_button_flair"></div>
@@ -47,29 +62,36 @@
     <main>
         <section id="hero">
             <h1 class="onscroll_t">The First AI-Driven Social Media Marketing Agency in Singapore!</h1>
-            <p id="hero_sub_header" class="onscroll_l">
-                Welcome to JG Media Works, Singapore’s premier AI-driven social media marketing agency. 
-                In a world where digital presence is paramount, we leverage the 
-                power of artificial intelligence to elevate your brand, streamline your marketing efforts,
-                and achieve unparalleled results.
-            </p>
-            <a href="#services" class="action_button onscroll_l">
-                <p>View Our Services</p>
-                <div style="display: contents;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--token-b7e0ee39-7195-4e97-994f-cec289c7aee4, rgb(255, 255, 255))" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 100%; height: 100%;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div>
-                <div class="action_button_flair"></div>
-            </a>
-            <div id="hero_checkout" class="up_a onscroll_d">
-                <div id="hero_checkout_left">
-                    <header>Check Out our Instagram!</header>
-                    <p>Follow for more updates!</p>
-                    <a href="">Link to Instagram ></a>
+            <div id="hero_sections">
+                <div class="hero_section">
+                    <p id="hero_sub_header" class="onscroll_l">
+                        Welcome to JG Media Works, Singapore’s premier AI-driven social media marketing agency. 
+                        In a world where digital presence is paramount, we leverage the 
+                        power of artificial intelligence to elevate your brand, streamline your marketing efforts,
+                        and achieve unparalleled results.
+                    </p>
+                    <a href="#services" class="action_button onscroll_l">
+                        <p>View Our Services</p>
+                        <div style="display: contents;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--token-b7e0ee39-7195-4e97-994f-cec289c7aee4, rgb(255, 255, 255))" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 100%; height: 100%;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div>
+                        <div class="action_button_flair"></div>
+                    </a>
+                    <div id="hero_checkout" class="up_a onscroll_d">
+                        <div id="hero_checkout_left">
+                            <header>Check Out our Instagram!</header>
+                            <p>Follow for more updates!</p>
+                            <a href="">Link to Instagram ></a>
+                        </div>
+                        <div id="hero_chechout_right"><img src="images/instagram.avif" alt=""></div>
+                    </div>
                 </div>
-                <div id="hero_chechout_right"><img src="images/instagram.avif" alt=""></div>
+                <div class="hero_section">        
+                    <div id="hero_images">
+                        <div class="hero_images_item first_child up_a onscroll_d"><img src="images/gabriel.avif" alt=""></div>
+                        <div class="hero_images_item up_a onscroll_d"><img src="images/joel_khoo.avif" alt=""></div>
+                    </div>
+                </div>
             </div>
-            <div id="hero_images">
-                <div class="hero_images_item first_child up_a onscroll_d"><img src="images/gabriel.avif" alt=""></div>
-                <div class="hero_images_item up_a onscroll_d"><img src="images/joel_khoo.avif" alt=""></div>
-            </div>
+           
         </section>
         <section id="about">
             <h2 class="header onscroll_d">About Us</h2>
@@ -102,7 +124,7 @@
                         <header>Gabriel Lee - Co-Founder</header>
                     </div>
                     <div class="about_board1_image">
-                        <img src="images/gabriel.avif" alt="">
+                        <img id="gabriel_img" src="images/gabriel.avif" alt="">
                     </div>    
                 </div>
                 <a href="#about_pitch" class="action_button action_button_invert onscroll_l">
@@ -199,7 +221,7 @@
                         <div class="action_button_flair"></div>
                     </a>
                 </div>
-                <div class="board up_a long onscroll_d">
+                <div class="board up_a onscroll_d">
                     <div class="board_img">
                         <div style="display: contents;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" focusable="false" color="rgb(0, 0, 0)" style="user-select: none; width: 100%; height: 100%; display: inline-block; fill: rgb(0, 0, 0); color: rgb(0, 0, 0); flex-shrink: 0;"><g color="rgb(0, 0, 0)" weight="regular"><path d="M119.76,217.94A8,8,0,0,1,112,224a8.13,8.13,0,0,1-2-.24l-32-8a8,8,0,0,1-2.5-1.11l-24-16a8,8,0,1,1,8.88-13.31l22.84,15.23,30.66,7.67A8,8,0,0,1,119.76,217.94Zm132.69-96.46a15.89,15.89,0,0,1-8,9.25l-23.68,11.84-55.08,55.09a8,8,0,0,1-7.6,2.1l-64-16a8.06,8.06,0,0,1-2.71-1.25L35.86,142.87,11.58,130.73a16,16,0,0,1-7.16-21.46L29.27,59.58h0a16,16,0,0,1,21.46-7.16l22.06,11,53-15.14a8,8,0,0,1,4.4,0l53,15.14,22.06-11a16,16,0,0,1,21.46,7.16l24.85,49.69A15.9,15.9,0,0,1,252.45,121.48Zm-46.18,12.94L179.06,80H147.24L104,122c12.66,8.09,32.51,10.32,50.32-7.63a8,8,0,0,1,10.68-.61l34.41,27.57Zm-187.54-18,17.69,8.85L61.27,75.58,43.58,66.73ZM188,152.66l-27.71-22.19c-19.54,16-44.35,18.11-64.91,5a16,16,0,0,1-2.72-24.82.6.6,0,0,1,.08-.08L137.6,67.06,128,64.32,77.58,78.73,50.21,133.46l49.2,35.15,58.14,14.53Zm49.24-36.24L212.42,66.73l-17.69,8.85,24.85,49.69Z"></path></g></svg></div>
                     </div>
@@ -315,19 +337,19 @@
                         <div class="action_button_flair"></div>
                     </a>
                 </div>
-                
-                <a class="action_button uie">
-                    <p>View Our Menu</p>
-                    <div style="display: contents;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--token-b7e0ee39-7195-4e97-994f-cec289c7aee4, rgb(255, 255, 255))" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 100%; height: 100%;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div>
-                    <div class="action_button_flair"></div>
-                </a>
-                <a class="action_button">
-                    <p>View Our Packages</p>
-                    <div style="display: contents;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--token-b7e0ee39-7195-4e97-994f-cec289c7aee4, rgb(255, 255, 255))" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 100%; height: 100%;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div>
-                    <div class="action_button_flair"></div>
-                </a>
 
             </div>
+                
+            <a class="action_button uie">
+                <p>View Our Menu</p>
+                <div style="display: contents;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--token-b7e0ee39-7195-4e97-994f-cec289c7aee4, rgb(255, 255, 255))" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 100%; height: 100%;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div>
+                <div class="action_button_flair"></div>
+            </a>
+            <a class="action_button uie">
+                <p>View Our Packages</p>
+                <div style="display: contents;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--token-b7e0ee39-7195-4e97-994f-cec289c7aee4, rgb(255, 255, 255))" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 100%; height: 100%;"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div>
+                <div class="action_button_flair"></div>
+            </a>
         </section>
         <section id="add_ons">
             <h2 class="onscroll_d">Add-ons</h2>

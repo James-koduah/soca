@@ -1,234 +1,22 @@
-*{
-    padding: 0;
-    margin: 0;
-    scroll-margin-top: 75px;
-}
-:root{
-    --nav-bg: #ffffff;
-    --ma-bg: #f9f9f9;
-    --black: #000;
-    --light_text: #555;
-    --mons : "Montserrat", "Montserrat Placeholder", sans-serif;
-    --jakarta: "Plus Jakarta Sans", "Montserrat", "Montserrat Placeholder", sans-serif;
-}
-
-body{
-    width: 100vw;
-    background: var(--ma-bg);
-    font-family: var(--mons);
-}
-img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-a{
-    text-decoration: none;
-    color: inherit;
-}
-
-/* Buttons with animations */
-.action_button{
-    position: relative;
-    width: fit-content;
-    padding: 12px 20px;
-    background: #000;
-    color: #eee;
-    font-size: 14px;
-    border-radius: 15px;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    transition: 0.3s;
-    overflow: hidden;
-    cursor: pointer;
-}
-.action_button svg{
-    width: 20px !important;
-    height: 20px !important;
-    margin-left: 35px;
-    transition: 0.3s;
-}
-
-.action_button:hover svg{
-    transform: rotate(90deg);
-}
-.action_button_flair{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 30%;
-    height: 50%;
-    border: 20px #fff solid;
-    border-radius: 45px;
-    transition: .2s linear;
-    opacity: 0;
-}
-.action_button:hover{
-    transform: scale(1.1) !important;
-}
-.action_button:hover .action_button_flair{
-    opacity: 1;
-    width: 120%;
-    height: 120%;
-}
-.action_button_invert{
-    background: #eee;
-    color: #333;
-}
-.action_button_invert svg{
-    stroke: #000;
-}
-.action_button_invert .action_button_flair{
-    border-color: #111;
-}
-.action_button_invert:hover{
-    background-color: #d5d5d5;
-}
-
-
-/* Makes an item move up when the mouse hovers over it */
-.up_a{
-    transition: 0.2s;
-}
-.up_a:hover{
-    transform: translateY(-10px) !important;
-}
-
-
-.onscroll_l{
-    transform: translate(-50px, 0);
-    transition: .7s;
-    opacity: 0;
-}
-.onscroll_r{
-    transform: translate(50px, 0);
-    transition: .7s;
-    opacity: 0;
-}
-.onscroll_t{
-    transform: translate(0px, -60px);
-    transition: .7s;
-    opacity: 0;
-}
-.onscroll_d{
-    transform: translate(0px, 60px);
-    transition: .7s;
-    opacity: 0;
-}
-
-
-/* The navigation bar at the top of the page */
-nav{
-    width: 90%;
-    height: fit-content;
-    background-color: var(--nav-bg);
-    box-shadow: 0px 4px 10px 0px #0000000d;
-    position: fixed;
-    top: 0px;
-    z-index: 100;
-    padding: 5px 5%;
-}
-#nav_main{  
-    position: relative;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    cursor: pointer;
-    z-index: 100;
-    background-color: var(--nav-bg);
-}
-
-#nav_right{
-    display: flex;
-    align-items: center;
-}
-#nav_right p{
-    font-size: 24px;
-    font-weight: 600;
-    color: #302e2e;
-}
-#nav_logo img{
-    height: 51px;
-    width: auto;
-    border-radius: 50%;
-    margin-right: 20px;
-}
-#nav_left{
-    width: 70px;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-#nav_left_button{
-    position: relative;
-    height: 9px;
-    width: 20px;
-    border: 2px #555 solid;
-    border-right: none;
-    border-left: none;
-    font-size: 18px;
-}
-#nav_left_button p{
-    margin-top: -30%;
-    font-size: 20px;
-    font-weight: 600;
-    color: var(--light_text);
-    display: none;
-}
-
-#nav_dropdown{
-    position: absolute;
-    top: -300%;
-    background: var(--nav-bg);
-    width: 90%;
-    margin-left: -5%;
-    display: none;
-    transition: .4s;
-    opacity: 0;
-    z-index: 99;
-    padding: 15px 30px;
-    flex-direction: column;
-}
-#nav_dropdown a{
-    font-size: 14px;
-    font-weight: 600;
-    color: #333;
-    margin-bottom: 15px;
-}
-#nav_dropdown .action_button{
-    color: #fff;
-    margin-top: 15px;
-}
-@media (max-width: 600px) {
-    #nav_right p{
-        font-size: 20px;
-    }
-    #nav_left{
-        width: fit-content;
-    }
-}
-@media (max-width: 300px) {
-    #nav_right p{
-        display: none;
-    }
-}
-
-
 /* The hero section */
 #hero{
     width: 88%;
+    max-width: 1300px;
     padding: 140px 7% 80px 5%;
+    margin: 0 auto;
 }
 #hero h1{
     font-size: 40px;
     font-weight: 600;
     line-height: 140%;
     margin-bottom: 24px;
+}
+#hero_sections{
+    display: flex;
+}
+.hero_section{
+    width: 95%;
+    padding-right: 5%;
 }
 #hero_sub_header{
     font-size: 16px;
@@ -241,7 +29,7 @@ nav{
 }
 #hero_checkout{
     width: 96%;
-    padding: 24px 2% 10px 2%;
+    padding: 30px 2% 10px 2%;
     background-color: #000;
     border-radius: 40px;
     display: flex;
@@ -279,18 +67,28 @@ nav{
 
 #hero_images{
     display: flex;
+    justify-content: space-around;
     padding-top: 50px;
 }
 #hero_images .first_child{
-    margin-top: 4%;
+    margin-top: 8%;
 }
 .hero_images_item{
-    width: 200px;
-    height: 400px;
+    width: 170px;
+    height: 340px;
     border: 3px #000 solid;
     border-radius: 200px;
     overflow: hidden;
-    margin-left: 100px;
+    /* margin-left: 100px; */
+}
+
+@media (max-width: 1000px) {
+    #hero_sections{
+        flex-direction: column;
+    }
+    #hero_images .first_child{
+        margin-top: 4%;
+    }
 }
 
 @media (max-width: 720px) {
@@ -343,15 +141,24 @@ nav{
     margin-bottom: 60px;
 }
 
+#about_leaders{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
 .about_board1{
-    width: calc(100% - 100px);
+    width: calc(48% - 100px);
     padding: 40px;
+    padding-bottom: none;
     background-color: var(--ma-bg);
     border-radius: 20px;
     display: flex;
+    flex-wrap: wrap;
     font-family: var(--jakarta);
     overflow: hidden;
     margin-bottom: 30px;
+    padding-bottom: 0;
 }
 .about_board1_text{
     width: 100%;
@@ -374,18 +181,20 @@ nav{
     color: #222;
 }
 .about_board1_image{
+    width: 100%;
     display: flex;
     align-items: end;
-    width: fit-content;
+    justify-content: flex-end;
     flex-shrink: 0;
+    margin-top: -30px;
 }
 .about_board1_image img{
     position: relative;
     width: 186px;
     height: 241px;
-    transform: translate(50px, 40px);
+    transform: translate(50px, 0px);
 }
-@media (max-width: 720px) {
+@media (max-width: 800px) {
     .about_board1{
         flex-wrap: wrap;
         padding: 20px;
@@ -394,11 +203,6 @@ nav{
     }
     .about_board1 p{
         font-size: 14px;
-    }
-    .about_board1_image{
-        width: 100%;
-        justify-content: flex-end;
-        margin-top: -50px;
     }
     .about_board1_image img{
         transform: translate(30px, 50);
@@ -497,9 +301,12 @@ nav{
 
 #pricing{
     margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 .price_card{
-    width: calc(100% - 60px);
+    width: calc(32% - 60px);
     padding: 30px;
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 0.796192px 2.38858px -0.625px, rgba(0, 0, 0, 0.05) 0px 2.41451px 7.24352px -1.25px, rgba(0, 0, 0, 0.05) 0px 6.38265px 19.148px -1.875px, rgba(0, 0, 0, 0.05) 0px 20px 60px -2.5px;
@@ -526,6 +333,7 @@ nav{
 
 .price_card ul{
     margin-bottom: 40px;
+    min-height: 200px;
 }
 .price_card li{
     list-style: none;
@@ -550,9 +358,15 @@ nav{
 .price_card .action_button p{
     color: #eee;
 }
-#pricing .uie{
-    width: 180px !important;
+.uie{
+    min-width: 200px !important;
     margin-bottom: 20px;
+}
+
+@media (max-width: 1000px) {
+    .price_card{    
+        width: calc(100% - 60px);
+    }
 }
 
 
