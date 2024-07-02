@@ -181,7 +181,7 @@ nav p{
     color: var(--light_text);
 }
 #nav_left ul li:hover a{
-    color: orangered;
+    color: rgb(182, 182, 182);
 }
 #nav_left ul li .action_button{
     color: #fff;
