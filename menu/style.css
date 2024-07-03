@@ -1,0 +1,137 @@
+main{
+    width: 90%;
+    padding: 100px 5% 80px 5%;
+}
+
+#sub_nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#back{
+    transform: rotate(180deg) !important;
+}
+#back svg{
+    transform: rotate(0deg) !important;
+}
+
+h1{
+    font-size: 50px;
+    font-weight: 400;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.container{
+    width: 100%;
+    margin-bottom: 70px;
+}
+.header{
+    width: 90%;
+    padding: 150px 5% 200px 5%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+}
+.header h2{
+    text-align: center;
+    font-size: 50px;
+    font-weight: 400;
+}
+.content{
+    width: 86%;
+    padding: 40px 2%;
+    margin: -150px 5% 0 5%;
+    background-color: var(--ma-bg);
+    border-radius: 10px;
+    border: 1px #ccc solid;
+    display: flex;
+    justify-content: space-around;
+}
+.items{
+    width: fit-content;
+    height: 100%;
+    padding: 0 15px;
+}
+.items header{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.items li{
+    list-style: none;
+    margin-bottom: 15px;
+}
+
+#instagram .header{
+    background: #833ab4;
+    background: linear-gradient(
+        to right,
+        #833ab4,#fd1d1d,#fcb045
+    );
+}
+#instagram h2{
+    color: #fff;
+}
+
+#tiktok .header{
+    background-color: #000;
+}
+#tiktok h2{
+    color: #fff;
+}
+
+
+
+#addons{
+    display: flex;
+    justify-content: space-between;
+    max-width: 800px;
+    margin: 50px auto;
+}
+#addons_text{
+    width: 50%;
+}
+#addons header{
+    font-size: 50px;
+    padding-bottom: 5px;
+    border-bottom: 2px #555 solid;
+    margin-bottom: 20px;
+}
+#addons p{
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+#addons_img{
+    width: 45%;
+    display: flex;
+    justify-content: center;
+}
+#addons_img img{
+    max-width: 400px;
+    object-fit: contain;
+}
+
+
+@media (max-width: 830px) {
+    .content{
+        width: calc(90% - 100px);
+        flex-wrap: wrap;
+        padding-left: 50px;
+        padding-right: 50px;
+        justify-content: space-between;
+    }
+    .items{
+        margin-bottom: 30px;
+    }
+    #addons{
+        flex-direction: column;
+        align-items: center;
+    }
+    #addons_text{
+        margin-bottom: 50px;
+    }
+}
