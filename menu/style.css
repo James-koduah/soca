@@ -33,12 +33,18 @@ h1{
     margin: 0 auto;
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
     border-radius: 5px;
 }
 .header h2{
     text-align: center;
     font-size: 50px;
     font-weight: 400;
+}
+.header img{
+    width: 8%;
+    margin-bottom: 20px;
 }
 .content{
     width: 86%;
@@ -89,6 +95,7 @@ h1{
     display: flex;
     justify-content: space-between;
     max-width: 800px;
+    width: 90%;
     margin: 50px auto;
 }
 #addons_text{
@@ -132,6 +139,46 @@ h1{
         align-items: center;
     }
     #addons_text{
+        width: 100%;
         margin-bottom: 50px;
+    }
+    #addons_img{
+        width: 100%;
+    }
+}
+@media (max-width: 600px) {
+    h1{
+        font-size: 30px;
+    }
+    .header img{
+        width: 50px;
+    }
+    .header h2{
+        font-size: 20px;
+    }
+    .action_button{
+        font-size: 10px;
+    }
+    .action_button svg{
+        margin-left: 10px;
+    }
+    #back svg{
+        margin-left: 0 !important;
+    }
+
+}
+
+@media (min-width: 1300px) {
+    h1{
+        font-size: 90px;
+    }
+    .header h2{
+        font-size: 70px;
+    }
+    .items header{
+        font-size: 40px;
+    }
+    .items li{
+        font-size: 25px;
     }
 }

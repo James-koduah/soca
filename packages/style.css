@@ -1,0 +1,17 @@
+main{
+    width: 90%;
+    padding: 100px 5% 80px 5%;
+}
+
+#sub_nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#back{
+    transform: rotate(180deg) !important;
+}
+#back svg{
+    transform: rotate(0deg) !important;
+}
