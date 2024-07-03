@@ -168,7 +168,7 @@ h1{
 
 }
 
-@media (min-width: 1300px) {
+@media (min-width: 1500px) {
     h1{
         font-size: 90px;
     }
